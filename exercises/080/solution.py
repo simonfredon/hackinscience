@@ -13,4 +13,4 @@ b = 1
 for i in range(0, 25):
     for j in range(b, 26):
         print(a[i] + a[j])
-b = b + 1
+    b = b + 1

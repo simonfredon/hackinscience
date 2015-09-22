@@ -9,4 +9,4 @@ word = "abcdefghijklmnopqrstuvwxyz"
 
 for i in range(0, 26):
     for j in range(0, 26):
-        print(word[i], word[j])
+        print(word[i] + word[j])

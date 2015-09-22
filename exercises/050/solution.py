@@ -9,6 +9,6 @@ a = 0
 for i in range(0, 1001):
     if i % 3 == 0:
         a += i
-    if i % 5 ==0:
+    if i % 5 == 0:
         a += i
 print(a)

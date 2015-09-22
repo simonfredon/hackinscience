@@ -6,8 +6,13 @@ Created on Tue Sep 22 15:11:48 2015
 """
 
 a = 0
-for i in range(0, 1001):
+for i in range(0, 1000):
     if i % 3 == 0:
-        if i % 5 == 0:
-            a += i
-print(a)
+        a += i
+
+b = 0
+for i in range(0, 1000):
+    if i % 5 == 0:
+        b += i
+        
+print(a + b)

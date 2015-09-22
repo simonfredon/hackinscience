@@ -7,7 +7,7 @@ Created on Tue Sep 22 11:31:44 2015
 
 import sys
 
-if len(sys.argv)> 1:
+if len(sys.argv) > 1:
     print(sys.argv[1])
 else:
-    print("PARAM")
+    print("usage: python3 solution.py PARAM")

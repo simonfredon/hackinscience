@@ -6,5 +6,5 @@ Created on Tue Sep 22 15:01:32 2015
 """
 
 
-def sqrt(x):
-    print(x ** 0.5)
+def sqrt(num):
+    print(num ** 0.5)

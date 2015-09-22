@@ -7,4 +7,3 @@ Created on Tue Sep 22 10:44:32 2015
 
 for i in "Hello World !":
     print(i)
-    

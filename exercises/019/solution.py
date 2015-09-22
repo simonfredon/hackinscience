@@ -8,6 +8,6 @@ Created on Tue Sep 22 14:22:50 2015
 import sys
 
 if len(sys.argv) > 2:
-    print(sys.argv[1] + sys.argv[2])
+    print(str(sys.argv[1] + sys.argv[2])
 else:
     print("usage: python3 solution.py OP1 OP2")

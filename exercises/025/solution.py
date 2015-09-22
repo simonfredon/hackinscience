@@ -7,4 +7,4 @@ Created on Tue Sep 22 14:29:59 2015
 
 import datetime
 
-print (datetime.datetime.now().strftime("Today is %Y-%m-%d and it is %H:%M:%S"))
+print(datetime.datetime.now().strftime("Today is %Y-%m-%d and it is %H:%M:%S"))

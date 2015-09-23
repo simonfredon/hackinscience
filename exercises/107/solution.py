@@ -18,5 +18,5 @@ def select_student(l, tr):
         else:
             ref.append(l[i])
     res = {'Accepted': sorted(acc, key=itemgetter(1), reverse=True),
-            'Refused': sorted(ref, key=itemgetter(1))}
+           'Refused': sorted(ref, key=itemgetter(1))}
     return res

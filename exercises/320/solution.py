@@ -9,7 +9,7 @@ alph = list(string.ascii_lowercase)
 print(alph)
 inpy = open("words.txt", "r")
 inprint = inpy.read()
-long = len (inprint)
+long = len(inprint)
 count = [0] * 26
 for j in range(0, 26):
     for i in inprint:

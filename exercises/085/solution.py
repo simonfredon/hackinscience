@@ -8,6 +8,7 @@ Created on Wed Sep 23 09:39:40 2015
 
 from operator import *
 
+
 def sort_a_list(lista):
     a = sorted(lista, reverse=True)
     return a

@@ -7,6 +7,6 @@ Created on Wed Sep 23 15:40:58 2015
 
 
 def is_multiple(a, b):
-    if a % b == 0 :
+    if a % b == 0:
         return True
     return False

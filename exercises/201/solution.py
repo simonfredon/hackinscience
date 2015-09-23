@@ -7,6 +7,7 @@ Created on Wed Sep 23 11:10:42 2015
 
 import string
 
+
 def is_alpha(al):
     alphalist = list(al)
     for i in alphalist:

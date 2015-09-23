@@ -7,12 +7,11 @@ Created on Wed Sep 23 10:31:30 2015
 
 
 def is_prime(num):
-    x = True
     n = num ** 0.5
     if num == 0:
-        return x == False
+        return False
     for i in range(2, int(n + 1)):
         if num % i == 0:
-            return x == False
+            return False
         else:
-            return x == True
+            return True

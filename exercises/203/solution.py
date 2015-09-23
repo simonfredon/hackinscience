@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep 23 11:18:49 2015
+Created on Wed Sep 23 15:40:58 2015
 
 @author: simonfredon
 """
 
 
-def perfect_shuffle(a):
-    la = int(len(a) / 2)
-    fin = [0] * len(a)
-    for i in range(0, la):
-        fin[(i * 2)] = a[i]
-        fin[(i * 2) + 1] = a[i + (la)]
-    return fin
+def is_multiple(a, b):
+    if a % b == 0 :
+        return True
+    return False

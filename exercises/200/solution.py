@@ -10,7 +10,7 @@ def is_prime(num):
     if num == 1:
         return False
     n = num ** 0.5
-    for i in list(range(2, (int(n) + 1))):      
+    for i in list(range(2, (int(n) + 1))):
         if num % i == 0:
             return False
     return True

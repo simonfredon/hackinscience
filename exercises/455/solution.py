@@ -15,5 +15,9 @@ def gen_colors(x):
         print(L[:x])
     else:
         print(L)
-     
+
+ 
+def gen_code(x, b):
+    if i in b:
+        
     

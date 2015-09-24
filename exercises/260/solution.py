@@ -15,11 +15,11 @@ def euclidean(a, b):
 
 
 def opt_euclidean(a, b):
-    d2 = math.pow(math.pow(b[0] - a[0], 2)  + math.pow(b[1] - a[1], 2), 0.5)
+    d2 = math.pow(math.pow(b[0] - a[0], 2) + math.pow(b[1] - a[1], 2), 0.5)
     return d2
 
 
 def np_euclidean(a, b):
-    d3 = numpy.power(numpy.power(b[0] - a[0], 2)  + \
-    numpy.power(b[0] - a[0], 2), 0.5)
+    d3 = numpy.power(numpy.power(b[0] - a[0], 2) + 
+        numpy.power(b[0] - a[0], 2), 0.5)
     return d3

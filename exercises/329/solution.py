@@ -32,6 +32,5 @@ def mul(var):
     return res
 
 for i in arr:
-    slice(i, i + 13, 1)
     x = mul(i, i + 1, i + 2, i + 3, i + 4)
     return x

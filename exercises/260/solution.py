@@ -23,7 +23,6 @@ a = np.array(())
 b = np.array(())
 
 
-
 def np_euclidean(a, b):
     d3 = np.linalg.norm(a-b)
     return d3

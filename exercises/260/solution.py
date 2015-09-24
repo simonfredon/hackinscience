@@ -19,8 +19,8 @@ def opt_euclidean(a, b):
     return d2
 
 
-a = numpy.array(())
-b = numpy.array(())
+a = np.array(())
+b = np.array(())
 
 def np_euclidean(a, b):
     d3 = np.linalg.norm(a-b)

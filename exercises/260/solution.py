@@ -6,7 +6,7 @@ Created on Thu Sep 24 09:42:40 2015
 """
 
 import math
-import numpy
+import numpy as np
 
 
 def euclidean(a, b):
@@ -19,7 +19,9 @@ def opt_euclidean(a, b):
     return d2
 
 
+a = numpy.array(())
+b = numpy.array(())
+
 def np_euclidean(a, b):
-    d3 = numpy.power(numpy.power(b[0] - a[0], 2) +
-                     numpy.power(b[0] - a[0], 2), 0.5)
+    d3 = np.linalg.norm(a-b)
     return d3

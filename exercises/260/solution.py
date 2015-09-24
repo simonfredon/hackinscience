@@ -6,23 +6,23 @@ Created on Thu Sep 24 09:42:40 2015
 """
 
 import math
-import numpy as np
+import numpy as nu
 
 
-def euclidean(a, b):
-    d = ((b[0] - a[0]) ** 2 + (b[1] - a[1]) ** 2) ** 0.5
-    return d
+def euclidean(x, y):
+    distance = 0
+    for i in range(len(x)):
+        distance = distance + (y[i] - x[i])**2
+    distance_fin = distance**0.5
+    return distance_fin
 
 
-def opt_euclidean(a, b):
-    d2 = math.pow(math.pow(b[0] - a[0], 2) + math.pow(b[1] - a[1], 2), 0.5)
-    return d2
-
-a = np.array(())
-
-b = np.array(())
+def opt_euclidean(x, y):
+    k = 0
+    for i in range(len(x)):
+        k = k + math.pow(y[i] - x[i], 2)
+    return math.pow(k, 0.5)
 
 
-def np_euclidean(a, b):
-    d3 = np.linalg.norm(a-b)
-    return d3
+def np_euclidean(x, y):
+    return nu.sqrt(nu.sum(nu.power(nu.array(x) - nu.array(y), 2)))

@@ -20,6 +20,6 @@ def opt_euclidean(a, b):
 
 
 def np_euclidean(a, b):
-    d3 = numpy.power(numpy.power(b[0] - a[0], 2) + 
-        numpy.power(b[0] - a[0], 2), 0.5)
+    d3 = numpy.power(numpy.power(b[0] - a[0], 2) +
+         numpy.power(b[0] - a[0], 2), 0.5)
     return d3

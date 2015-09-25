@@ -30,7 +30,7 @@ def check_guess(guess, x, alpha):
             return True
     return False
 
- 
+
 def score_guess(guess, gen_code):
     count1 = 0
     count2 = 0
@@ -41,4 +41,3 @@ def score_guess(guess, gen_code):
             elif i in gen_code:
                 count2 = count2 + 1
     return (count1, count2)
-   

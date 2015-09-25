@@ -38,10 +38,7 @@ def score_guess(guess, gen_code):
         for j in gen_code:
             if i == j:
                 count1 = count1 + 1
-            else:
-                if i in gen_code:
-                    count2 = count2 + 1
+            elif i in gen_code:
+                count2 = count2 + 1
     return (count1, count2)
-
-
-        
+   

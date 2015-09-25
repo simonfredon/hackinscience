@@ -19,7 +19,8 @@ def gen_colors(x):
 
 
 def gen_code(x, alpha):
-    return ''.join(random.choice(alpha[:x]) for i in range(x))
+    code = ''.join(random.choice(alpha[:x]) for i in range(x))
+    return code
 
 
 def solve_mind(x, y):

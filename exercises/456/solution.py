@@ -7,8 +7,6 @@ Created on Fri Sep 25 14:35:35 2015
 
 import itertools
 from master_mind import *
-code = ""
-colors = ""
 
 
 def gen_colors(x):
@@ -19,8 +17,7 @@ def gen_colors(x):
 
 
 def gen_code(x, alpha):
-    code = ''.join(random.choice(alpha[:x]) for i in range(x))
-    return code
+    return ''.join(random.choice(alpha[:x]) for i in range(x))
 
 
 def solve_mind(x, y):
@@ -29,11 +26,11 @@ def solve_mind(x, y):
         i = "".join(i)
     for j in range(0, len(tries)):
         a = random.choice(tries)
-        if a == code:
+        if a == y:
             return (a, j)
         else:
-            culo = score_guess(a, code)
+            culo = score_guess(a, y)
             for i in tries:
-                vaffan = score_guess(i, code)
+                vaffan = score_guess(i, y)
                 if vaffan == culo:
                     tries.remove(i)

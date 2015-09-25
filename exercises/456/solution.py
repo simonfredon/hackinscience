@@ -20,17 +20,17 @@ def gen_code(x, alpha):
     return ''.join(random.choice(alpha[:x]) for i in range(x))
 
 
-def solve_mind(x, y):
-    tries = list(itertools.combinations_with_replacement(x, len(y)))
+def solve_mind(x, code):
+    tries = list(itertools.combinations_with_replacement(x, len(code)))
     for i in tries:
         i = "".join(i)
     for j in range(0, len(tries)):
         a = random.choice(tries)
-        if a == y:
+        if a == code:
             return (a, j)
         else:
-            culo = score_guess(a, y)
+            culo = score_guess(a, code)
             for i in tries:
-                vaffan = score_guess(i, y)
+                vaffan = score_guess(i, code)
                 if vaffan == culo:
                     tries.remove(i)

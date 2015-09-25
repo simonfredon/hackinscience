@@ -5,6 +5,7 @@ Created on Fri Sep 25 12:07:22 2015
 @author: simonfredon
 """
 
+
 def en_int(i):
     return "i" + str(i) + "e"
 
@@ -111,7 +112,6 @@ def decode(data):
         return de_list(data)
     elif data[0] == "d":
         return de_dict(data)
-
 
 z = {b'bar': b'spam', b'foo': [{b'ez': b'rty'}, 32]}
 print(z)

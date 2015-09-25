@@ -2,7 +2,7 @@
 """
 Created on Thu Sep 24 15:09:48 2015
 
-@author: pippo
+@author: simonfredon
 """
 import string
 import checker

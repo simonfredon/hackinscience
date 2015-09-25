@@ -9,8 +9,6 @@ import string
 import random
 
 alpha = string.ascii_uppercase
-code = ""
-colors = ""
 
 
 def gen_colors(x):

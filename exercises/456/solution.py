@@ -9,21 +9,13 @@ import itertools
 from master_mind import *
 
 
-def gen_colors(x):
-    if x in range(0, 26):
-        return alpha[:x]
-    else:
-        return alpha
-
-
-def gen_code(x, alpha):
-    return ''.join(random.choice(alpha[:x]) for i in range(x))
-
-
 def solve_mind(x, code):
     tries = list(itertools.combinations_with_replacement(x, len(code)))
     for i in tries:
-        i = "".join(i)
+        puttana = []
+        for j in i:
+            puttana.append(j)
+        i = puttana
     for j in range(0, len(tries)):
         a = random.choice(tries)
         if a == code:

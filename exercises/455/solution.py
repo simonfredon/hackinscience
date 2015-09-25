@@ -13,9 +13,9 @@ alpha = string.ascii_uppercase
 
 def gen_colors(x):
     if x in range(0, 26):
-        print(alpha[:x])
+        return alpha[:x]
     else:
-        print(alpha)
+        return alpha
 
 
 def gen_code(x, alpha):

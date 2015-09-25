@@ -30,8 +30,7 @@ def solve_mind(x, y):
     for j in range(0, len(tries)):
         a = random.choice(tries)
         if a == code:
-            solution = (a, j)
-            return solution
+            return (a, j)
         else:
             culo = master_mind.score_guess(a, code)
             for i in tries:

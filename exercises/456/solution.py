@@ -11,6 +11,7 @@ from master_mind import *
 colors = ""
 code = ""
 
+
 def gen_colors(x):
     if x in range(0, 26):
         return alpha[:x]
@@ -24,5 +25,3 @@ def gen_code(x, alpha):
 
 def solve_mind(x, y):
     return (x, 2)
-    
-    

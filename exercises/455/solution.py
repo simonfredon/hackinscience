@@ -38,7 +38,8 @@ def score_guess(guess, gen_code):
         if i == j:
                 count1 += 1
                 gen_code = gen_code.replace(j, "0", 1)
-        elif i in gen_code:
+    for i in guess:  
+        if i in gen_code:
                 count2 += 1
                 gen_code = gen_code.replace(i, "0", 1)
     return (count1, count2)

@@ -5,6 +5,7 @@ Created on Fri Sep 25 11:36:39 2015
 @author: simonfredon
 """
 
+
 def filtered(items, lambda_expression):
     out = []
     for i in range(len(items)):

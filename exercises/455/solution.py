@@ -34,12 +34,13 @@ def check_guess(guess, x, alpha):
 def score_guess(guess, gen_code):
     count1 = 0
     count2 = 0
-    for i in range(guess):
-        if guess[i] == gen_code[i]:
-            count1 = count1 + 1
-        else:
-            if guess[i] in gen_code:
-                count2 = count2 + 1
+    for i in guess:
+        for j in gen_code:
+            if i == j:
+                count1 = count1 + 1
+            else:
+                if i in gen_code:
+                    count2 = count2 + 1
     return (count1, count2)
 
 

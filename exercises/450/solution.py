@@ -1,37 +1,41 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Sep 24 15:09:48 2015
+Created on Fri Sep 25 11:37:48 2015
 
 @author: simonfredon
 """
-import string
-import checker
-al = list(string.ascii_lowercase)
-AL = list(string.ascii_uppercase)
-forward = "forward"
-backward = "backward"
+
+from string import ascii_lowercase
+forward = 1
+backward = -1
+ascii_lc = ascii_lowercase
+d_ascii = ascii_lowercase + ascii_lowercase
 
 
-def caesar_cypher(s, k, m):
-    code = list(s)
-    ori = list(s)
-    resu = list(s)
-    for i in range(0, len(s)):
-        if checker.numa(ori[i]) != 666:
-            if checker.numa(ori[i]) % 1 == 0:
-                code[i] = checker.numa(ori[i])
-                if m == "backward":
-                    code[i] = (code[i] - k) % 26
-                if m == "forward":
-                    code[i] = (code[i] + k) % 26
-                resu[i] = al[code[i]]
-            if checker.numa(ori[i]) % 1 == 0.5:
-                code[i] = int(checker.numa(ori[i]) - 0.5)
-                if m == "backward":
-                    code[i] = (code[i] - k) % 26
-                if m == "forward":
-                    code[i] = (code[i] + k) % 26
-                resu[i] = AL[code[i]]
+def caesar_cypher(s, key, method):
+    try:
+        s_input = s.lower()
+        o_s = []
+        case = s.split()
+        i_s = s_input.split()
+        if (key > 26):
+            ukey = key % 26
         else:
-            resu[i] = ori[i]
-    return ''.join(resu)
+            ukey = key
+        for i in range(len(i_s)):
+            code = str()
+            for k in range(len(i_s[i])):
+                try:
+                    if (ascii_lc.index(i_s[i][k]) >= 0):
+                        if (i_s[i][k] == case[i][k]):
+                            code = (code + d_ascii[ascii_lc.index(i_s[i][k]) +
+                                    (ukey * method)])
+                        else:
+                            code = (code + d_ascii[ascii_lc.index(i_s[i][k]) +
+                                    (ukey * method)].upper())
+                except Exception:
+                    code = code + i_s[i][k]
+            o_s.append(code)
+        return ' '.join(str(e) for e in o_s)
+    except Exception:
+        return 'Input error'

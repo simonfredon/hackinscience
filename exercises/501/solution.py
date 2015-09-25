@@ -25,17 +25,17 @@ def best_change(amout, coins):
 
 
 def changes(amout, coins):
-    coins = tuple(sorted(coins, reverse = True))
-    count = 0
-    count_init = -1
+    coins = tuple(sorted(coins, reverse=True))
+    count = 1
+    count_init = 0
     change = [amout]
     while count_init != count:
-        #print(change)
-        #print(count)
+        # print(change)
+        # print(count)
         count_init = count
         for i in reversed(range(0, len(change))):
             X = best_change(change[i], coins)
-            if X != None:
+            if X is not None:
                 count = count + 1
                 del change[i]
                 for j in X:
@@ -43,5 +43,3 @@ def changes(amout, coins):
                 break
         change = sorted(change, reverse=True)
     return count
-
-print(changes(42, (1, 2, 5, 10, 20, 50, 100, 200, 500)))

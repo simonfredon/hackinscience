@@ -6,7 +6,7 @@ Created on Fri Sep 25 12:06:47 2015
 """
 
 
-def changes2(amount, coins_rv):
+def changes(amount, coins_rv):
     count = 0
     while coins_rv[0] > amount:
         del coins_rv[0]
@@ -17,5 +17,5 @@ def changes2(amount, coins_rv):
             count = count + 1
         else:
             if len(coins_rv) > 1:
-                count = count + changes2(rest, coins_rv[1:])
+                count = count + changes(rest, coins_rv[1:])
     return count

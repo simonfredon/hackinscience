@@ -7,6 +7,8 @@ Created on Fri Sep 25 14:35:35 2015
 
 import itertools
 from master_mind import *
+code = ""
+colors = ""
 
 
 def gen_colors(x):

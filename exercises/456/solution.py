@@ -36,4 +36,4 @@ def solve_mind(x, y):
             for i in tries:
                 vaffan = master_mind.score_guess(i, code)
                 if vaffan == culo:
-                    del tries[-i]
+                    tries.remove(i)

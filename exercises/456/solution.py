@@ -24,4 +24,16 @@ def gen_code(x, alpha):
 
 
 def solve_mind(x, y):
-    return (x, 2)
+    tries = list(itertools.combinations_with_replacement(list(y), x))
+    for i in tries:
+        i = "".join(i)
+    for j in range(0, len(tries)):
+        a = random.choice(tries)
+        if a == code:
+            return (a, j)
+        else:
+            culo = master_mind.score_guess(a, code)
+            for i in tries:
+                vaffan = master_mind.score_guess(i, code)
+                if vaffan == culo:
+                    del tries[-i]

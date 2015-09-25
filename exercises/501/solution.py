@@ -30,8 +30,6 @@ def changes(amout, coins):
     count_init = 0
     change = [amout]
     while count_init != count:
-        # print(change)
-        # print(count)
         count_init = count
         for i in reversed(range(0, len(change))):
             X = best_change(change[i], coins)

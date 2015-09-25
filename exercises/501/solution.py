@@ -5,6 +5,7 @@ Created on Fri Sep 25 12:06:47 2015
 @author: simonfredon
 """
 
+
 def best_change(amout, coins):
     change = []
     if amout <= coins[-1]:
@@ -21,6 +22,7 @@ def best_change(amout, coins):
                 amout = amout - i
                 break
     return change
+
 
 def changes(amout, coins):
     coins = tuple(sorted(coins, reverse = True))

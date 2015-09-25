@@ -37,7 +37,7 @@ def score_guess(guess, gen_code):
     for i, j in zip(guess, gen_code):
         if i == j:
                 count1 += 1
-                gen_code = gen_code.replace(j, "0")
+                gen_code = gen_code.replace(j, "0", 1)
         elif i in gen_code:
                 count2 += 1
                 gen_code = gen_code.replace(i, "0", 1)

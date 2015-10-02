@@ -10,17 +10,20 @@ from master_mind import *
 
 
 def solve_mind(x, code):
-    tries = [''.join(x) for x in
-             itertools.combinations_with_replacement(x, len(code))]
+#    tries = [''.join(x) for x in
+#             itertools.combinations_with_replacement(x, len(code))]
+    tries = [''.join(x) for x in list(itertools.product(x, repeat=len(code)))]
+    print(tries)
     guess_count = 1
     while True:
         guess = tries.pop(random.randint(0, len(tries) - 1))
-        if guess == code:
-            return (guess, guess_count)
-        guess_count += 1
         score = score_guess(guess, code)
+        if score == (4, 0):
+            return (guess, guess_count)
         tries = [x for x in
                  tries if score_guess(x, code) == score]
+        guess_count += 1
+
 
 #    for i in tries:
 #        puttana = ""
